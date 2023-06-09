@@ -6,6 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 function Sidebar({ sidebar, setSidebar }) {
   const [storeSubmenu, setStoreSubmenu] = useState("close");
 
@@ -29,20 +30,20 @@ function Sidebar({ sidebar, setSidebar }) {
       icon: <StoreIcon />,
       submenus: [
         {
-          path: "/store/category",
-          name: "Category",
+          path: "/store/categories",
+          name: "Categories",
           icon: <StoreIcon />,
         },
         {
-          path: "/store/product",
-          name: "Product",
+          path: "/store/products",
+          name: "Products",
           icon: <StoreIcon />,
         },
       ],
     },
     {
-      path: "/order",
-      name: "Order",
+      path: "/orders",
+      name: "Orders",
       icon: <ShoppingCartIcon />,
     },
     {
@@ -73,8 +74,8 @@ function Sidebar({ sidebar, setSidebar }) {
                 <div
                   onClick={toggleStoreSubmenu}
                   className={`flex ${
-                    sidebar === "close" ? "justify-center gap-0" : "justify-between"
-                  } items-center gap-2 p-2 rounded-md transition-all ease-in-out duration-300 cursor-pointer hover:bg-gray-900`}
+                    sidebar === "close" ? "justify-center" : "justify-between"
+                  } items-center p-2 rounded-md transition-all ease-in-out duration-300 cursor-pointer hover:bg-gray-900`}
                 >
                   <div className="flex gap-2">
                     {menu.icon}
@@ -98,8 +99,8 @@ function Sidebar({ sidebar, setSidebar }) {
                     <Link
                       to={submenu.path}
                       className={`flex ${
-                        sidebar === "close" && "justify-center pl-0"
-                      } items-center gap-2 pl-8 py-2 rounded-md transition-all ease-in-out duration-300 hover:bg-gray-900`}
+                        sidebar === "open" ? "pl-8" : "justify-center"
+                      } items-center gap-2 py-2 rounded-md transition-all ease-in-out duration-300 hover:bg-gray-900`}
                     >
                       {submenu.icon}
                       {sidebar === "open" && submenu.name}

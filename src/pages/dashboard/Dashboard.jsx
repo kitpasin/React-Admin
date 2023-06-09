@@ -1,6 +1,11 @@
 /* eslint-disable */
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { Card } from "@mui/material";
+import Summaries from "./summaries/Summaries";
+import BarChart from "./charts/BarChart";
+import DoughnutChart from "./charts/DoughnutChart";
+import LatestOrdersTable from "./tables/LatestOrdersTable";
+import TopSellingTable from "./tables/TopSellingTable";
 
 function Dashboard() {
   return (
@@ -10,46 +15,46 @@ function Dashboard() {
         <p>Dashboard</p>
       </div>
       <div className="grid grid-cols-3 gap-4">
-        <Card className="p-4">
-          <p className="text-gray-700 font-bold">Revenue</p>
-          <div className="flex justify-between items-center mt-4">
-            <p className="text-gray-700 text-xl font-bold">$100,000.00</p>
-            <p className="text-green-700 font-bold">+11.1%</p>
-          </div>
+        <Summaries />
+      </div>
+      <div className="grid grid-cols-3 gap-4">
+        <Card className="col-span-2 p-4 flex flex-col gap-4">
           <div className="flex justify-between items-center">
-            <p className="text-gray-500 font-bold">Vs 3 month prior to</p>
-            <p className="text-gray-500 font-bold">01 June 2023</p>
+            <p className="text-gray-700 font-bold">Sales Report</p>
+            <button className="text-blue-500 font-bold hover:text-blue-700 hover:underline">
+              View Report
+            </button>
           </div>
+          <BarChart />
         </Card>
-        <Card className="p-4">
-          <p className="text-gray-700 font-bold">Order</p>
-          <div className="flex justify-between items-center mt-4">
-            <p className="text-gray-700 text-xl font-bold">1,234</p>
-            <p className="text-red-700 font-bold">-3.3%</p>
-          </div>
+        <Card className="p-4 flex flex-col gap-4">
           <div className="flex justify-between items-center">
-            <p className="text-gray-500 font-bold">Vs 3 month prior to</p>
-            <p className="text-gray-500 font-bold">01 June 2023</p>
+            <p className="text-gray-700 font-bold">Categories</p>
+            <button className="text-blue-500 font-bold hover:text-blue-700 hover:underline">
+              View Categories
+            </button>
           </div>
-        </Card>
-        <Card className="p-4">
-          <p className="text-gray-700 font-bold">Purchase</p>
-          <div className="flex justify-between items-center mt-4">
-            <p className="text-gray-700 text-xl font-bold">$555,555.55</p>
-            <p className="text-green-700 font-bold">+5.5%</p>
-          </div>
-          <div className="flex justify-between items-center">
-            <p className="text-gray-500 font-bold">Vs 3 month prior to</p>
-            <p className="text-gray-500 font-bold">01 June 2023</p>
-          </div>
+          <DoughnutChart />
         </Card>
       </div>
       <div className="grid grid-cols-3 gap-4">
-        <Card className="col-span-2 p-4">
-          <p>Graph 1</p>
+        <Card className="col-span-2 p-4 flex flex-col gap-4">
+          <div className="flex justify-between items-center">
+            <p className="text-gray-700 font-bold">Latest Orders</p>
+            <button className="text-blue-500 font-bold hover:text-blue-700 hover:underline">
+              View Orders
+            </button>
+          </div>
+          <LatestOrdersTable />
         </Card>
-        <Card className="p-4">
-          <p>Graph 2</p>
+        <Card className="p-4 flex flex-col gap-4">
+          <div className="flex justify-between items-center">
+            <p className="text-gray-700 font-bold">Top Selling</p>
+            <button className="text-blue-500 font-bold hover:text-blue-700 hover:underline">
+              View Products
+            </button>
+          </div>
+          <TopSellingTable />
         </Card>
       </div>
     </div>
