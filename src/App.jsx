@@ -5,11 +5,12 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import Topbar from "./components/topbar/Topbar";
-import Sidebar from "./components/sidebar/Sidebar";
+import Topbar from "./layouts/Topbar";
+import Sidebar from "./layouts/Sidebar";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Members from "./pages/members/Members";
 import Categories from "./pages/store/Categories";
-import Products from "./pages/store/products";
+import Products from "./pages/store/Products";
 import Orders from "./pages/orders/Orders";
 import Report from "./pages/report/Report";
 
@@ -34,6 +35,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/members" element={<Members />} />
               <Route path="/store/categories" element={<Categories />} />
               <Route path="/store/products" element={<Products />} />
               <Route path="/orders" element={<Orders />} />

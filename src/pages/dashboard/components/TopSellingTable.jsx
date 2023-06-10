@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TablesData } from "./data/TablesData";
+import { TablesData } from "../../../data/dashboard/TablesData";
 
 function TopSellingTable() {
   return (

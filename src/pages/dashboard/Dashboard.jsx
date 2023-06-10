@@ -1,19 +1,15 @@
 /* eslint-disable */
-import DashboardIcon from "@mui/icons-material/Dashboard";
 import { Card } from "@mui/material";
-import Summaries from "./summaries/Summaries";
-import BarChart from "./charts/BarChart";
-import DoughnutChart from "./charts/DoughnutChart";
-import LatestOrdersTable from "./tables/LatestOrdersTable";
-import TopSellingTable from "./tables/TopSellingTable";
+import Summaries from "./components/Summaries";
+import BarChart from "./components/BarChart";
+import DoughnutChart from "./components/DoughnutChart";
+import LatestOrdersTable from "./components/LatestOrdersTable";
+import TopSellingTable from "./components/TopSellingTable";
 
 function Dashboard() {
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-2 text-xl font-bold text-gray-700">
-        <DashboardIcon style={{ fontSize: "28px" }} />
-        <p>Dashboard</p>
-      </div>
+      <p className="text-xl font-bold text-gray-700">Dashboard</p>
       <div className="grid grid-cols-3 gap-4">
         <Summaries />
       </div>

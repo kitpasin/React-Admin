@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { Link } from "react-router-dom";
-import { TablesData } from "./data/TablesData";
+import { TablesData } from "../../../data/dashboard/TablesData";
 
 function LatestOrdersTable() {
   function statusColor(status) {
