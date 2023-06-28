@@ -9,7 +9,7 @@ import Topbar from "./layouts/Topbar";
 import Sidebar from "./layouts/Sidebar";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Members from "./pages/members/Members";
-import Categories from "./pages/store/Categories";
+import Categories from "./pages/store/categories/Categories";
 import Products from "./pages/store/Products";
 import Orders from "./pages/orders/Orders";
 import Report from "./pages/report/Report";

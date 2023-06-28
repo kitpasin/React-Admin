@@ -4,6 +4,7 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import StoreIcon from "@mui/icons-material/Store";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SummarizeIcon from "@mui/icons-material/Summarize";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 export const SidebarData = [
   {
@@ -51,12 +52,12 @@ export const SidebarData = [
       {
         path: "/posts",
         title: "Posts",
-        icon: <SummarizeIcon />,
+        icon: <MenuBookIcon />,
       },
       {
         path: "/pages",
         title: "Pages",
-        icon: <SummarizeIcon />,
+        icon: <MenuBookIcon />,
       },
     ],
   },

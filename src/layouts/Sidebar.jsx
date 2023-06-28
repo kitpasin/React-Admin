@@ -86,8 +86,8 @@ function Sidebar({ sidebar, setSidebar }) {
                       key={index}
                       to={submenu.path}
                       className={`flex items-center ${
-                        sidebar === "close" && "justify-center pl-0"
-                      } gap-2 pl-8 py-2 rounded-md transition-all ease-in-out duration-300 hover:bg-gray-500`}
+                        sidebar === "close" ? "justify-center pl-0" : "pl-8"
+                      } gap-2 py-2 rounded-md transition-all ease-in-out duration-300 hover:bg-gray-500`}
                     >
                       {submenu.icon}
                       {sidebar === "open" && submenu.title}
